@@ -1,0 +1,11 @@
+<div class="list-group">
+  {% for category in categories %}
+    {% if  category.slug == selected_category %}
+      <a href="{% url 'blogs_by_category' category.slug %}" class="list-group-item list-group-item-secondary active">{{category.name|title}}</a>
+    {% else %}
+      <a href="{% url 'blogs_by_category' category.slug %}" class="list-group-item list-group-item-secondary">{{category.name|title}}</a>
+    {% endif %}
+  {% endfor %}
+</div>
+
+
